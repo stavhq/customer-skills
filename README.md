@@ -4,7 +4,7 @@ Skills for building on Stav AI, the EU-sovereign inference platform.
 
 > **Generated — do not edit here.** The source is `skills/customer/` in
 > `stavhq/stav-code`. Change a skill with a pull request there; CI publishes
-> it here on merge. Version 1.0.1 (stav-code 3409a7da2).
+> it here on merge. Version 1.0.2 (stav-code 2591c669e).
 
 ## Install
 
@@ -24,4 +24,4 @@ Claude Code keeps the version you installed.
 
 ## Skills
 
-None yet.
+- `find-a-model`
