@@ -1,0 +1,30 @@
+{
+  "name": "stav",
+  "version": "1.0.5",
+  "description": "Skills for building on Stav AI, the EU-sovereign inference platform.",
+  "author": { "name": "Stav AI", "url": "https://stav.ai" },
+  "homepage": "https://stav.ai/docs/getting-started/agent-setup",
+  "repository": "https://github.com/stavhq/customer-skills",
+  "keywords": ["inference", "llm", "gateway", "eu", "sovereignty", "gdpr", "model-routing"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Stav",
+    "shortDescription": "EU-sovereign AI inference.",
+    "longDescription": "Run your models in Europe from your agent. Find a model that fits a task and a policy, move an app onto Stav, set where requests may run, and see where your money goes.",
+    "developerName": "Stav AI",
+    "category": "Developer Tools",
+    "capabilities": ["Find a model", "Move an app to Stav", "Set the workspace policy", "Review cost"],
+    "websiteURL": "https://stav.ai",
+    "privacyPolicyURL": "https://stav.ai/legal/privacy",
+    "termsOfServiceURL": "https://stav.ai/legal/terms",
+    "defaultPrompt": [
+      "Find me a model that runs in the EU for answering support email.",
+      "Move this app's OpenAI calls onto Stav.",
+      "Make sure my workspace only uses providers in the EEA with zero data retention.",
+      "Where did my Stav credits go this month, and what could be cheaper?"
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

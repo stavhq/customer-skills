@@ -1,6 +1,11 @@
 {
   "name": "stav",
-  "version": "1.0.2",
+  "displayName": "Stav",
+  "version": "1.0.5",
   "description": "Skills for building on Stav AI, the EU-sovereign inference platform.",
-  "author": { "name": "Stav AI" }
+  "author": { "name": "Stav AI", "url": "https://stav.ai" },
+  "homepage": "https://stav.ai/docs/getting-started/agent-setup",
+  "repository": "https://github.com/stavhq/customer-skills",
+  "icon": "./assets/icon.png",
+  "keywords": ["inference", "llm", "gateway", "eu", "sovereignty", "gdpr", "model-routing"]
 }

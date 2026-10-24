@@ -1,0 +1,12 @@
+{
+  "name": "customer-skills",
+  "owner": { "name": "Stav AI", "url": "https://stav.ai" },
+  "metadata": { "description": "Skills for building on Stav AI, the EU-sovereign inference platform." },
+  "plugins": [
+    {
+      "name": "stav",
+      "source": "plugins/stav",
+      "description": "Skills for building on Stav AI, the EU-sovereign inference platform."
+    }
+  ]
+}

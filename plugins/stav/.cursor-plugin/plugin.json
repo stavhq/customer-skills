@@ -1,0 +1,12 @@
+{
+  "name": "stav",
+  "version": "1.0.5",
+  "description": "Skills for building on Stav AI, the EU-sovereign inference platform.",
+  "author": { "name": "Stav AI", "url": "https://stav.ai" },
+  "homepage": "https://stav.ai/docs/getting-started/agent-setup",
+  "repository": "https://github.com/stavhq/customer-skills",
+  "keywords": ["inference", "llm", "gateway", "eu", "sovereignty"],
+  "logo": "https://raw.githubusercontent.com/stavhq/customer-skills/main/plugins/stav/assets/icon.png",
+  "skills": "skills",
+  "mcpServers": ".mcp.json"
+}

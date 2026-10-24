@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "stav": {
+      "type": "http",
+      "url": "https://stav.ai/mcp"
+    }
+  }
+}
