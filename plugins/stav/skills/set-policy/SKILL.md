@@ -44,7 +44,7 @@ name) to pick from.
 ### 1. Read
 
 Call `smartrouter_get_config` and `teamkeys_policy_get`. Tell the person
-the current rule in at most five lines, in plain words.
+the current rule in a few short lines, in plain words.
 
 ### 2. Ask what they want
 

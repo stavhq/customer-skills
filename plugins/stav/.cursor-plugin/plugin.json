@@ -1,6 +1,6 @@
 {
   "name": "stav",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Skills for building on Stav AI, the EU-sovereign inference platform.",
   "author": { "name": "Stav AI", "url": "https://stav.ai" },
   "homepage": "https://stav.ai/docs/getting-started/agent-setup",

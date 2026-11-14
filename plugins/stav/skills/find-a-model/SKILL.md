@@ -27,7 +27,7 @@ pick for a live request.
 5. **Keep it short:** 3–5 models, one line each on why, the price for their
    task, where it runs.
 
-## The flow (≤ 6 tool calls)
+## The flow
 
 ### 1. Ask for the needs you cannot infer
 

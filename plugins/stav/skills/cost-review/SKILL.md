@@ -35,7 +35,7 @@ If the person uses Routers (`routers_list`), add `routers_cost_by_model`
 with `router_id` and `days: 30` for each Router that spent, to see which
 models the Router picked.
 
-Tell the person, in at most six lines: total spent in the period, the
+Tell the person, in a few short lines: total spent in the period, the
 balance and how long it lasts at this rate, and the top three costs, each
 with model, key or Router, requests, and cost.
 
