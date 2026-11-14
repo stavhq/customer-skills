@@ -73,8 +73,10 @@ the FIRST rule that removed it (`endpoint:runs_in`, `capability:tool_calling`,
 
 `public_model_scorecard` for one model's full benchmark card,
 `public_models_compare` for two or more side by side, `models_get` for
-every endpoint fact. These are public catalogue reads — no sign-in, no
-MCP switch.
+every endpoint fact. The first two are public catalogue reads — no
+sign-in, no MCP switch. A whole `models_get` answer can run to tens of
+thousands of characters: to read endpoint facts, pass
+`include: ["endpoints"]`, or `endpoint` with one endpoint's slug or id.
 
 ### 5. A Router, on request
 
