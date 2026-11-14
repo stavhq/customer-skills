@@ -39,10 +39,17 @@ From the task, fill what you can; ask for the rest in ONE message:
 | What it must do | `capabilities` | `tool_calling`, `structured_output`, `json_mode`, `document_understanding` (PDF), `vision_input`, `audio_input`, `extended_thinking` |
 | How good, per axis | `strength` | `{"coding": 70}`, `{"multilingual": 60}` — axes: reasoning, coding, instruction_following, multilingual, long_context, safety |
 | Where it must run | `runs_in`, `min_rung`, `zdr`, `no_training` | `"eu"`, `"eea"`, `"NO"`; `L3`; `true` |
-| Price | `max_price` + `price_unit` | `1.0` per 1M input tokens (team currency) |
+| Price | `max_price` + `price_unit` | `1.0` per 1M input tokens, in the currency the answer names (see below) |
 | How much | `volume` | requests per month, input and output tokens per request |
 | What matters | `priorities` | `{quality, cost, speed}` summing to 100 |
 | A model to explain | `explain` | `["meta/llama-4-maverick"]` |
+
+**Currency.** Prices, price caps and `estimated_cost` are in the currency
+the answer names (`currency`). That is the workspace's billing currency once
+it is confirmed, and EUR from an MCP client until then — so it can differ
+from the wallet's currency (`team_billing_currency_get` says which). Read
+`currency` before you set `max_price` or compare a price with a balance,
+and name the currency in what you tell the person.
 
 Chat models carry no language list; for Norwegian, Swedish or German ask
 for `strength.multilingual` rather than `languages` (which is a hard rule
@@ -51,9 +58,9 @@ only on embedding and transcription models).
 ### 2. `models_shortlist`
 
 One call. Read `models[].reasons` (structured: strength + percentile,
-use-case fit and where it came from, price per 1M in the team currency,
-tokens per second, compute countries / rung / ZDR / no-training), and
-`estimated_cost` when a volume was given. Present 3–5 lines:
+use-case fit and where it came from, price per 1M, tokens per second,
+compute countries / rung / ZDR / no-training), and `estimated_cost` when
+a volume was given. Present 3–5 lines:
 
 > **mistral/mistral-small-4** — Norwegian strength 71 (top 20%), fits
 > customer support (curator), runs in SE and FR, zero retention,

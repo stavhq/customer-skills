@@ -13,7 +13,11 @@ asks, and then only after a yes.
 
 1. **Money in the workspace currency.** Use `cost` and `currency` from the
    tools — what the workspace was charged. `cost_eur` is a catalogue
-   estimate; do not show it beside `cost` unless asked.
+   estimate; do not show it beside `cost` unless asked. Prices and
+   `estimated_cost` from `models_shortlist` are in the `currency` that
+   answer names — EUR from an MCP client until the workspace confirms its
+   currency — which can differ from the wallet's. When they differ, say
+   both currencies and do not subtract one from the other.
 2. **Same policy, same needs.** A cheaper model counts only if it serves
    under the workspace policy and has every capability the current one is
    used for (tools, JSON output, images, PDFs, context length). Check it;
