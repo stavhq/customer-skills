@@ -74,9 +74,11 @@ the FIRST rule that removed it (`endpoint:runs_in`, `capability:tool_calling`,
 `public_model_scorecard` for one model's full benchmark card,
 `public_models_compare` for two or more side by side, `models_get` for
 every endpoint fact. The first two are public catalogue reads — no
-sign-in, no MCP switch. A whole `models_get` answer can run to tens of
-thousands of characters: to read endpoint facts, pass
-`include: ["endpoints"]`, or `endpoint` with one endpoint's slug or id.
+sign-in, no MCP switch. `models_get` gives compact endpoint rows by
+default — where it runs, ZDR and training with their basis, prices,
+limits, reasoning levels. Pass `include: ["endpoints"]` to skip the model
+facts, and `endpoint` with one endpoint's slug or id (or `detail: "full"`)
+for the evidence behind a fact: its source URL and when it was confirmed.
 
 ### 5. A Router, on request
 
