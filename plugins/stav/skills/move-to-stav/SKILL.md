@@ -73,9 +73,12 @@ On a yes:
 2. `budget_set` — `scope_type: "key"`, `scope_id` = the new key's id, a
    small `limit` and `period: "day"`.
 3. Show the key once. Ask the person to store it, not you.
-4. `inference_chat` with the chosen model, one short message, and
-   `api_key` = the new key. Then `request_routing_get` with the request id:
-   where it ran, which Inference Provider, why, and what it cost.
+4. `inference_chat` with the chosen model and one short message. Leave
+   `api_key` out: Stav uses a hidden key for your sign-in, and a key passed
+   as an argument is shown in full in the approval and kept in the chat
+   (a live key is refused). Then `request_routing_get` with the request id:
+   where it ran, which Inference Provider, why, and what it cost. The new
+   key proves itself in step 6, when the app runs with it.
 
 ### 6. The code change
 
