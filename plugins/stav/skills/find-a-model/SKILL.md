@@ -35,7 +35,8 @@ From the task, fill what you can; ask for the rest in ONE message:
 
 | Need | Field on `models_shortlist` | Examples |
 |---|---|---|
-| What kind of work | `use_case` | `customer_support_chatbot`, `code_review`, `structured_extraction`, `summarisation`, `translation`, `agentic_coding` |
+| What kind of model | `category` | `chat` (default), `embedding`, `rerank`, `transcription`, `speech`, `image`, `decision` |
+| What kind of work | `use_case` | A slug that fits the category: call `public_use_cases_list` with the same `category` and pick from it (for chat, e.g. `customer_support_chatbot`, `code_review`, `summarisation`). A use case outside the category answers 422 naming the types it fits |
 | What it must do | `capabilities` | `tool_calling`, `structured_output`, `json_mode`, `document_understanding` (PDF), `vision_input`, `audio_input`, `extended_thinking` |
 | How good, per axis | `strength` | `{"coding": 70}`, `{"multilingual": 60}` — axes: reasoning, coding, instruction_following, multilingual, long_context, safety |
 | Where it must run | `runs_in`, `min_rung`, `zdr`, `no_training` | `"eu"`, `"eea"`, `"NO"`; `L3`; `true` |
