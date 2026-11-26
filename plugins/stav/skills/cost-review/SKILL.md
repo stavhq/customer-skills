@@ -30,9 +30,10 @@ asks, and then only after a yes.
 
 ### 1. The picture (four reads)
 
-- `wallet_get` — balance, currency and `runway_days`. When `runway_basis`
-  is `expiry` or `idle`, the credits expire before the spending uses them
-  up: say "until your credits expire", not "at this rate".
+- `credits_get` with `part: "balance"` — balance, currency and
+  `runway_days`. When `runway_basis` is `expiry` or `idle`, the credits
+  expire before the spending uses them up: say "until your credits
+  expire", not "at this rate".
 - `usage_get_summary` — requests, tokens and the model breakdown.
 - `analytics_top_models` with `rank_by: "cost"`, `days: 30`.
 - `apikeys_spend` with `days: 30` — which keys spend.

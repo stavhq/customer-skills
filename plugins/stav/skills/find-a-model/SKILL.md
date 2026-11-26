@@ -48,7 +48,8 @@ From the task, fill what you can; ask for the rest in ONE message:
 **Currency.** Prices, price caps and `estimated_cost` are in the currency
 the answer names (`currency`). That is the workspace's billing currency once
 it is confirmed, and EUR from an MCP client until then — so it can differ
-from the wallet's currency (`team_billing_currency_get` says which). Read
+from the wallet's currency (`billing_info_get` with `part: "currency"`
+says which). Read
 `currency` before you set `max_price` or compare a price with a balance,
 and name the currency in what you tell the person.
 
