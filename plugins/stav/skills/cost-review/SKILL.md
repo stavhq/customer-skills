@@ -34,7 +34,9 @@ asks, and then only after a yes.
   `runway_days`. When `runway_basis` is `expiry` or `idle`, the credits
   expire before the spending uses them up: say "until your credits
   expire", not "at this rate".
-- `usage_get_summary` — requests, tokens and the model breakdown.
+- `usage_get_summary` — requests and tokens over the last 30 days. Its
+  `total_compute_units` is an estimate in EUR at catalogue price, not what
+  was charged: for money, use the `apikeys_spend` costs.
 - `analytics_top_models` with `rank_by: "cost"`, `days: 30`.
 - `apikeys_spend` with `days: 30` — which keys spend.
 
