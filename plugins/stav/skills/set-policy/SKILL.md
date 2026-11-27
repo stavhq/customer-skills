@@ -35,15 +35,16 @@ make the rule stricter for its own traffic; it can never loosen it.
 | Blocked countries | `smartrouter_update_config` · `blocked_provider_countries` | ISO codes, e.g. `["US", "CN"]` | Never a provider from these jurisdictions. |
 | Blocked providers | `teamkeys_policy_update` · `blocked_provider_ids` | Inference Provider ids | Never these providers. Replaces the whole list. |
 
-`smartrouter_get_config` reads the first five. `teamkeys_policy_get` reads
-the blocked providers and lists every provider (`providers`: id, slug,
-name) to pick from.
+`smartrouter_get_config` reads the first five. `key_rules_get` with
+`part: "workspace_keys"` reads the blocked providers and lists every
+provider (`providers`: id, slug, name) to pick from.
 
 ## The flow
 
 ### 1. Read
 
-Call `smartrouter_get_config` and `teamkeys_policy_get`. Tell the person
+Call `smartrouter_get_config` and `key_rules_get` with
+`part: "workspace_keys"`. Tell the person
 the current rule in a few short lines, in plain words.
 
 ### 2. Ask what they want
