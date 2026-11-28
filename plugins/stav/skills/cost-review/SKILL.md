@@ -34,13 +34,14 @@ asks, and then only after a yes.
   `runway_days`. When `runway_basis` is `expiry` or `idle`, the credits
   expire before the spending uses them up: say "until your credits
   expire", not "at this rate".
-- `usage_get_summary` — requests and tokens over the last 30 days. Its
+- `workspace_usage_get` with `part: "summary"` — requests and tokens over
+  the last 30 days. Its
   `total_compute_units` is an estimate in EUR at catalogue price, not what
   was charged: for money, use the `apikeys_spend` costs.
 - `analytics_top_models` with `rank_by: "cost"`, `days: 30`.
 - `apikeys_spend` with `days: 30` — which keys spend.
 
-If the person uses Routers (`routers_list`), add `router_usage_get` with
+If the person uses Routers (`routers_list`), add `router_get` with
 `part: "by_model"`, the Router's `router_id` (or its name) and `days: 30`
 for each Router that spent, to see which models the Router picked.
 
